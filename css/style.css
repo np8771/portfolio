@@ -1,0 +1,303 @@
+body {
+
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #000;
+    overflow: hidden; /* Prevent scrolling on the body */
+    /*padding-left: 55px; /* Adjusted for sidebar */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed; /* Fixed position so it's always visible on the side */
+    left: 0; /* Align to the left side of the viewport */
+    top: 0; /* Align to the top of the viewport */
+    width: 55px; /* Width of the sidebar - appears narrow */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #000; /* Black background */
+    display: flex; /* Use flexbox for internal alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Start alignment for vertical positioning */
+    padding-top: 0px; /* Add some space at the top */
+    z-index: 1000; /* Ensure the sidebar is above other content */
+    border: 1px solid #707070; /* Gray border, adjust the color as needed */
+}
+
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-link {
+    display: block;
+    width: 100%;
+    padding: 15px 0; /* Vertical padding for each link */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #1a1a1a; /* Slightly lighter background on hover/active */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row; /* Line up children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: center; /* Center children horizontally */
+    height: auto;
+    max-height: 100vh;
+    position: relative;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1200px; /* Set a max-width if desired */
+    box-sizing: border-box;
+    margin: auto; /* Center the entire .main-content */
+    overflow: hidden; /* Prevent scrolling within the main content */
+}
+
+
+.texts {
+    color: white; /* Text color for the content */
+        display: flex; /* Use flexbox to align child elements */
+        flex-direction: column; /* Stack children vertically */
+        align-items: flex-start; /* Align child elements to the left */
+        height: auto; /* Let the content dictate the height */
+        max-height: 50vh; /* Ensure it doesn't exceed the viewport height */
+        position: relative; /* Position relative for absolute child positioning */
+        width: 550px; /* Set the width as per your design */
+        margin-right: 18px;
+        box-sizing: border-box; /* Include padding in height calculation */
+}
+    
+
+
+
+/* General styles for the hero section */
+
+.hero {
+    /* Adjustments to make sure .hero behaves as a flex item */
+    flex: 1; /* Take up only the necessary space */
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    background-color: #000;
+    /* Remove any width restrictions to allow flex to manage the width */
+}
+
+
+.image {
+    margin-left: 18px;
+    display: flex; /* Use this if you need to align the image a certain way inside .image */
+    align-items: center; /* Align the image vertically in the center */
+    justify-content: center; /* Center the image horizontally */
+    width:300px;
+    padding: 20px; /* Add padding if you want some space around the image */
+}
+
+/* Styles for the image itself */
+.image img {
+    max-width: 100%; /* Ensure the image is responsive and doesn't overflow */
+    max-height: 100%; /* Optional: may set a max-height to ensure it fits within the viewport */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: if you want rounded corners */
+    border: 2px solid white;
+}
+
+
+
+
+/* Styles specifically for the name title */
+.name-title {
+    font-size: 96px; /* Sets a large font size for the title */
+    font-weight: normal; /* Makes the title text bold */
+    margin-bottom: -6px; /* Provides space between the title and the subtitle */
+    letter-spacing: -3px; /* Adjusts the spacing between letters for a tighter look */
+    line-height: 1.2; /* Adjusts the line height for the title */
+    /* text-transform: uppercase; If you want to enforce uppercase styling */
+}
+
+.sub-title-container {
+    border-top: .75px solid #707070; /* Adjust thickness and color as needed */
+    border-bottom: .75px solid #707070; /* Adjust thickness and color as needed */
+    padding: 1px 0; /* Add padding to top and bottom as needed */
+}
+
+.sub-title {
+    /* Your existing styles */
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 31.7px;
+    font-weight: 100;
+    letter-spacing: 0.37px;
+    /* ... other styles ... */
+    margin: 0; /* Remove margin if you don't want space around the text */
+    padding: 0; /* Add padding inside the border if needed */
+    display: inline-block; /* or 'block' depending on your layout needs */
+    /* ... other styles ... */
+}
+
+.sub-title-personal {
+    /* Your existing styles */
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 31.7px;
+    font-weight: 100;
+    letter-spacing: 0.37px;
+    letter-spacing: -3%; /* Adjust the letter spacing */
+    /* ... other styles ... */
+    margin: 0; /* Remove margin if you don't want space around the text */
+    padding: 0; /* Add padding inside the border if needed */
+    display: inline-block; /* or 'block' depending on your layout needs */
+    /* ... other styles ... */
+}
+
+.bio {
+    color: #dbdbdb; /* Default text color */
+    font-size: 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 100;
+    line-height: 29px;
+    word-wrap: break-word;
+    text-align: justify;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+.family{
+    color: #53E0FF;
+
+}
+
+.personal-growth{
+    color: #B8FFC7;
+}
+
+.light-hearted-moments{
+    color: #FFB8F8;
+
+}
+
+.two-years {
+    color: #B6B9BB;
+}
+
+.microsoft {
+    color: #B8FFC7;
+}
+
+.unc-chapel-hill {
+    color: #53E0FF;
+}
+
+.app-team-carolina {
+    color: #FFB8F8;
+}
+
+.toggles {
+    display: flex; /* Flex container to lay out children in a row */
+    justify-content: start; /* Align children to the start */
+    align-items: center; /* Center children vertically */
+    gap: 10px;
+    padding-left: 0px; /* Add padding around the buttons */
+    padding-bottom: 5px;
+}
+
+/* Style for inactive toggle background */
+.toggle-background {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    border: 2px solid #707070; /* Default to grey (inactive) */
+    text-align: center;
+    transition: border-color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Style for inactive toggle text */
+.toggle-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    line-height: 18px;
+    color: #707070; /* Default to grey (inactive) */
+    transition: color .3s ease; /* Smooth transition for color change */
+}
+
+/* Style for active career toggle */
+.career.active .toggle-background,
+.career.active .toggle-text {
+    border-color: #FFB8F8; /* Active color for career background */
+    color: #FFB8F8; /* Active color for career text */
+}
+
+/* Style for active personal toggle */
+.personal.active .toggle-background,
+.personal.active .toggle-text {
+    border-color: #FFB8F8; /* Active color for personal background */
+    color: #FFB8F8; /* Active color for personal text */
+}
+
+.toggle-button {
+    width: 95px;
+    height: 24px;
+    border-radius: 15px;
+    position: relative; /* Changed from absolute to relative */
+    cursor: pointer;
+     display: flex; /* Make it a flex container */
+    align-items: center; /* Center content vertically */
+    justify-content: center; 
+    transition: transform 0.3s ease;
+}
+
+
+.toggle-button:hover {
+    transform: scale(1.1);
+}
+
+/* ... rest of your CSS ... */
+
+
+
+
+.work-name-title {
+    font-size: 76px; /* Sets a large font size for the title */
+    font-weight: normal; /* Makes the title text bold */
+    margin-bottom: -6px; /* Provides space between the title and the subtitle */
+    letter-spacing: -3px; /* Adjusts the spacing between letters for a tighter look */
+    line-height: 1.2; /* Adjusts the line height for the title */
+    /* text-transform: uppercase; If you want to enforce uppercase styling */
+}
+
+.work-sub-title {
+    /* Your existing styles */
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 31.7px;
+    font-weight: 100;
+    letter-spacing: 0.37px;
+    /* ... other styles ... */
+    margin: 0; /* Remove margin if you don't want space around the text */
+    padding: 0; /* Add padding inside the border if needed */
+    display: inline-block; /* or 'block' depending on your layout needs */
+    /* ... other styles ... */
+}
